@@ -14,15 +14,15 @@
     <section class="survey-container">
         <form class="form-container" action="">
             <fieldset><!--First Name, Last Name, Birthday, Gender, Email, Phone -->
-                <label>First Name: <input type="text" name="first-name"></label>
-                <label>Last Name: <input type="text" name="last-name"></label>
+                <label>First Name: <input type="text" name="first-name" min="3" max="10"></label>
+                <label>Last Name: <input type="text" name="last-name"min="3" max="10"></label>
                 <label>Birthday: <input type="date" name="birthday"></label>
                 <label>Gender: <input type="radio"name="gender"></label>
                 <label>Male <input type="radio" name="gender"></label>
                 <label>Female <input type="radio" name="gender"></label>
                 <label>Prefer not to say<Input type="radio" name="gender"></label>
                 <label>Email: <input type="email" name="email"></label>
-                <label>Phone: <input type="tel" name="phone"></label>
+                <label>Phone: <input type="tel" name="phone" min="10" max="10"></label>
             </fieldset>
             <fieldset> <!--Address, City, State, Zip-->
                 <label>Street Address: <input></label>

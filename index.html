@@ -27,8 +27,8 @@
             <fieldset> <!--Address, City, State, Zip-->
                 <label>Street Address: <input type="text"></label>
                 <label>City: <input type="text"></label>
-                <label>State: <input type="text"></label>
-                <label>Zip Code: <input type="text"></label>
+                <label>State: <input type="text" min="two" max="4"></label>
+                <label>Zip Code: <input type="text" required pattern="[0-9]{5}"></label>
             </fieldset>
             <fieldset><!--Radio-->
                 <label>How often do you use our site? <input></label><!--How often do you use our site-->

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
     <title>Survey</title>
 </head>
  <body>
@@ -14,16 +15,18 @@
     <section class="survey-container">
         <form class="form-container" action="">
             <fieldset class="form-section"><!--First Name, Last Name, Birthday, Gender, Email, Phone -->
-                <label class="lable-and-input">First Name: <input type="text" name="first-name" min="3" max="10" required></label>
+                <label class="label-and-input">First Name: <input type="text" name="first-name" min="3" max="10" required></label>
                 <label class="label-and-input">Last Name: <input type="text" name="last-name"min="3" max="10" required></label>
                 <label class="label-and-input">Birthday: <input type="date" name="birthday" required></label>
-                <label class="label-and-input">Gender: <input type="radio"name="gender" value=""></label>
-                <label class="label-and-input">Male <input type="radio" name="gender" value="1"></label>
-                <label class="label-and-input">Female <input type="radio" name="gender" value="2"></label>
-                <label class="label-and-input">Prefer not to say<Input type="radio" name="gender" value="3"></label>
+                <label class="side-by-side-radio">Gender: 
+                    <label>Male <input type="radio" name="gender" value="1"></label>
+                    <label>Female <input type="radio" name="gender" value="2"></label>
+                    <label>Prefer not to say <input type="radio" name="gender" value="3"></label>
+                </label>
                 <label class="label-and-input">Email: <input type="email" name="email" required></label>
                 <label class="label-and-input">Phone: <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ></label>
             </fieldset>
+
             <fieldset class="form-section"> <!--Address, City, State, Zip-->
                 <label class="label-and-input">Street Address: <input type="text" name="street"></label>
                 <label class="label-and-input">City: <input type="text" name="city"></label>
@@ -31,59 +34,60 @@
                 <label class="label-and-input">Zip Code: <input type="text" required pattern="[0-9]{5}" name="zip"></label>
             </fieldset>
             <fieldset class="form-section"><!--Radio-->
-                <label class="label-and-input">How often do you use our site?
-                    <label>Never: <input type="radio" name="site-visits" required value="1"></label>
-                    <label>Rarely: <input type="radio" name="site-visits" value="2"></label>
-                    <label>Sometimes: <input type="radio" name="site-visits" value="3"></label>
-                    <label>Often: <input type="radio" name="site-visits" value="4"></label>
-                    <label>Daily: <input type="radio" name="site-visits" value="5"></label>
-                    </label>
-                <label class="label-and-input">How satisfied are you with our websites usability? 
-                    <label>Not Satisfied: <input type="radio" name="useability" required value="1"></label>
-                    <label>Barely Satisfied: <input type="radio" name="useability" value="2"></label>
-                    <label>Kind of Satisfied: <input type="radio" name="useability" value="3"></label>
-                    <label>Mostly Satisfied: <input type="radio" name="useability" value="4"></label>
-                    <label>Very Satisfied: <input type="radio" name="useability"value="5"></label>
+                <label class="radio-column">How often do you use our site?
+                    <label><input type="radio" name="site-visits" required value="1"> Never</label>
+                    <label> <input type="radio" name="site-visits" value="2"> Rarely</label>
+                    <label> <input type="radio" name="site-visits" value="3"> Sometimes</label>
+                    <label> <input type="radio" name="site-visits" value="4"> Often</label>
+                    <label><input type="radio" name="site-visits" value="5"> Daily</label>
                 </label>
-                <label class="label-and-input">How satisfied are you with our customer communication? 
-                    <label>Not Satisfied: <input type="radio" name="communication" required value="1"></label>
-                    <label>Barely Satisfied: <input type="radio" name="communication" value="2"></label>
-                    <label>Kind of Satisfied: <input type="radio" name="communication" value="3"></label>
-                    <label>Mostly Satisfied: <input type="radio" name="communication" value="4"></label>
-                    <label>Very Satisfied: <input type="radio" name="communication"value="5"></label> 
+                <label class="radio-column">How satisfied are you with our websites usability? 
+                    <label><input type="radio" name="useability" required value="1"> Not Satisfied </label>
+                    <label><input type="radio" name="useability" value="2"> Barely Satisfied </label>
+                    <label><input type="radio" name="useability" value="3"> Kind of Satisfied </label>
+                    <label><input type="radio" name="useability" value="4"> Mostly Satisfied </label>
+                    <label><input type="radio" name="useability"value="5"> Very Satisfied</label>
                 </label>
-                <label class="label-and-input">How satisfied are you with the quality of our content?</label>
-                    <label>Not Satisfied: <input type="radio" name="content" required value="1"></label>
-                    <label>Barely Satisfied: <input type="radio" name="content" value="2"></label>
-                    <label>Kind of Satisfied: <input type="radio" name="content" value="3"></label>
-                    <label>Mostly Satisfied: <input type="radio" name="content" value="4"></label>
-                    <label>Very Satisfied: <input type="radio" name="content"value="5"></label>
-                <label class="label-and-input">How satisfied are you with the quality of our merchandise? 
-                    <label>Not Satisfied: <input type="radio" name="merchandise" required value="1"></label>
-                    <label>Barely Satisfied: <input type="radio" name="merchandise" value="2"></label>
-                    <label>Kind of Satisfied: <input type="radio" name="merchandise" value="3"></label>
-                    <label>Mostly Satisfied: <input type="radio" name="merchandise" value="4"></label>
-                    <label>Very Satisfied: <input type="radio" name="merchandise"value="5"></label>
+                <label class="radio-column">How satisfied are you with our customer communication? 
+                    <label> <input type="radio" name="communication" required value="1"> Not Satisfied</label>
+                    <label> <input type="radio" name="communication" value="2"> Barely Satisfied</label>
+                    <label> <input type="radio" name="communication" value="3"> Kind of Satisfied</label>
+                    <label> <input type="radio" name="communication" value="4"> Mostly Satisfied</label>
+                    <label> <input type="radio" name="communication"value="5"> Very Satisfied</label> 
+                </label>
+                <label class="radio-column">How satisfied are you with the quality of our content?
+                    <label><input type="radio" name="content" required value="1"> Not Satisfied</label>
+                    <label> <input type="radio" name="content" value="2"> Barely Satisfied</label>
+                    <label> <input type="radio" name="content" value="3"> Kind of Satisfied</label>
+                    <label> <input type="radio" name="content" value="4"> Mostly Satisfied</label>
+                    <label><input type="radio" name="content"value="5"> Very Satisfied </label>
+                </label>
+                <label class="radio-column">How satisfied are you with the quality of our merchandise? 
+                    <label><input type="radio" name="merchandise" required value="1"> Not Satisfied</label>
+                    <label><input type="radio" name="merchandise" value="2"> Barely Satisfied</label>
+                    <label> <input type="radio" name="merchandise" value="3"> Kind of Satisfied</label>
+                    <label><input type="radio" name="merchandise" value="4"> Mostly Satisfied</label>
+                    <label> <input type="radio" name="merchandise"value="5"> Very Satisfied</label>
                 </label>
             </fieldset>
 
             <fieldset class="form-section"><!--Checkbox-->
-                <label class="label-and-input"> What content  should we do more of?
-                    <label>Interviews <input type="checkbox" value="Interviews" name="more-content"></label>
-                    <label>Item Reviews  <input type="checkbox" value="Item Testing" name="more-content"></label>
-                    <label>Giveaways  <input type="checkbox" value="Giveaways" name="more-content"></label>
-                    <label>Games <input type="checkbox" value="Games" name="more-content"></label>
-                    <label>Pranks <input type="checkbox" value="Pranks" name="more-content"></label>
+                <label class="radio-column"> What content  should we do more of?
+                    <label> <input type="checkbox" value="Interviews" name="more-content"> Interviews</label>
+                    <label><input type="checkbox" value="Item Testing" name="more-content"> Item Reviews  </label>
+                    <label> <input type="checkbox" value="Giveaways" name="more-content"> Giveaways</label>
+                    <label> <input type="checkbox" value="Games" name="more-content">Games</label>
+                    <label><input type="checkbox" value="Pranks" name="more-content">Pranks</label>
                 </label>
-                <label class="label-and-input">What content should we do less of? 
-                    <label>Interviews <input type="checkbox" value="Interviews" name="less-content"></label>
-                    <label>Item Reviews  <input type="checkbox" value="Item Testing" name="less-content"></label>
-                    <label>Giveaways  <input type="checkbox" value="Giveaways" name="less-content"></label>
-                    <label>Games <input type="checkbox" value="Games" name="less-content"></label>
-                    <label>Pranks <input type="checkbox" value="Pranks" name="less-content"></label>
+                <label class="radio-column">What content should we do less of? 
+                    <label> <input type="checkbox" value="Interviews" name="less-content">Interviews</label>
+                    <label><input type="checkbox" value="Item Testing" name="less-content">Item Reviews   </label>
+                    <label> <input type="checkbox" value="Giveaways" name="less-content"> Giveaways </label>
+                    <label> <input type="checkbox" value="Games" name="less-content">Games</label>
+                    <label><input type="checkbox" value="Pranks" name="less-content"> Pranks </label>
                 </label>
             </fieldset>
-            <fieldset class="form-section"><!--Text Box-->
+            <fieldset class="form-section text-box"><!--Text Box-->
                 <label> More questions or concerns?
                     <textarea name="text-box" value=""></textarea>
                 </label>

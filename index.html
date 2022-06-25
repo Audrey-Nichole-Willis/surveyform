@@ -18,11 +18,16 @@
                 <label class="label-and-input">First Name: <input type="text" name="first-name" min="3" max="10" required></label>
                 <label class="label-and-input">Last Name: <input type="text" name="last-name"min="3" max="10" required></label>
                 <label class="label-and-input">Birthday: <input type="date" name="birthday" required></label>
-                <label class="side-by-side-radio">Gender: 
-                    <label>Male <input type="radio" name="gender" value="1"></label>
-                    <label>Female <input type="radio" name="gender" value="2"></label>
-                    <label>Prefer not to say <input type="radio" name="gender" value="3"></label>
+
+                <label class="label-and-input">Gender: 
+                    <select>
+                        <option value="">(select one)</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="not-say">Prefer Not to Say</option>
+                    </select>
                 </label>
+
                 <label class="label-and-input">Email: <input type="email" name="email" required></label>
                 <label class="label-and-input">Phone: <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ></label>
             </fieldset>
